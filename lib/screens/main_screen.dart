@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:input_custom/screens/ubcication_screen.dart';
 import '../models/user_data.dart';
 import 'login_screen.dart';
 import 'register_screen.dart';
@@ -100,6 +101,37 @@ class WelcomeScreen extends StatelessWidget {
                     ),
                     child: const Text(
                       'Registro',
+                      style: TextStyle(
+                        fontSize: 16,
+                        color: Color.fromARGB(255, 10, 131, 139),
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 12),
+                //se agrego otro sizedbox para poder agregar el boton de ubicaion
+                SizedBox(
+                  width: 220,
+                  height: 48,
+                  child: OutlinedButton(
+                    onPressed: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(builder: (_) => UbcicationScreen()),
+                      );
+                    },
+                    style: OutlinedButton.styleFrom(
+                      side: const BorderSide(
+                        color: Color.fromARGB(255, 10, 131, 139),
+                        width: 2,
+                      ),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(30),
+                      ),
+                      backgroundColor: Colors.white,
+                    ),
+                    child: const Text(
+                      'Ubicacion',
                       style: TextStyle(
                         fontSize: 16,
                         color: Color.fromARGB(255, 10, 131, 139),

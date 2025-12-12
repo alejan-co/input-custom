@@ -8,7 +8,6 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
-  static const Color primaryColor = Color(0xFF4B33B2);
   final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
 
@@ -113,10 +112,6 @@ class _LoginScreenState extends State<LoginScreen> {
                                 Navigator.of(context).maybePop();
                               },
                               style: OutlinedButton.styleFrom(
-                                side: const BorderSide(
-                                  color: primaryColor,
-                                  width: 2,
-                                ),
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(30),
                                 ),
@@ -126,7 +121,6 @@ class _LoginScreenState extends State<LoginScreen> {
                               child: const Text(
                                 'Volver',
                                 style: TextStyle(
-                                  color: primaryColor,
                                   fontSize: 16,
                                   fontWeight: FontWeight.w600,
                                 ),
